@@ -470,7 +470,7 @@ public class NumberUtils {
                 cpyStr = cpyStr.substring(1);
             }
             final int hexDigits = cpyStr.length();
-            if (hexDigits > 16 || (hexDigits == 16 && cpyStr.charAt(0) >= '8')) { // too many for Long
+            if (hexDigits > 16) { // too many for Long
                 return createBigInteger(str);
             }
             if (hexDigits > 8 || (hexDigits == 8 && cpyStr.charAt(0) >= '8')) { // too many for an int
